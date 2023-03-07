@@ -3,7 +3,6 @@ services:
   # SOURCE : https://hub.docker.com/r/prestashop/prestashop/
   prestashop:
     image: prestashop/prestashop:1.7-7.3-apache
-    restart: always
     networks:
       - prestashop
     ports:
@@ -28,7 +27,6 @@ services:
   # SOURCE : https://hub.docker.com/_/mariadb
   mariadb:
     image: mariadb
-    restart: always
     networks:
       - prestashop
     volumes:
@@ -40,7 +38,6 @@ services:
   # SOURCE : https://hub.docker.com/_/phpmyadmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    restart: always
     networks:
       - prestashop
     links:
